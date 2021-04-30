@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ccce44d3-9a1c-4a54-aa78-4e829206410c" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="20f3a1d4-f672-4a72-b4de-28e5d82608b2" file="dev.yaml" />
+	<flow name="demo-app-onpremFlow" doc:id="c4e10f4d-c9e2-44a6-91bb-93ec6a3ec120" >
+		<http:listener doc:name="Listener" doc:id="8271d186-4448-4fa1-a0af-3750188127df" config-ref="HTTP_Listener_config" path="/test-onprem"/>
+		<logger level="INFO" doc:name="Logger" doc:id="1e9d278e-c734-403b-a493-4f99e649bcdf" message='"Demo App OnPrem has Started"'/>
+		<ee:transform doc:name="Transform Message" doc:id="28900d19-c5cb-42c2-92fd-8ad5d52bf012" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message": "Demo App OnPrem Application has Started"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="cace3609-4da4-40ef-a3ab-c8a2dfe22cfb" message='"Demo App OnPrem has Completed"'/>
+	</flow>
+</mule>
