@@ -10,11 +10,6 @@ pipeline {
   stages {
 	stage('Build') {
          steps {
-		   bat 'mvn  clean package -DskipTests'
-		 }
-		 }
-    stage('Build1') {
-         steps {
 		   bat 'mvn  clean deploy'
 		 }
 		 }
