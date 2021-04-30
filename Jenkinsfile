@@ -10,7 +10,7 @@ pipeline {
   stages {
 	stage('Build') {
          steps {
-		   bat 'mvn  clean deploy'
+		   bat 'mvn  clean package -DskipTests'
 		 }
 		 }
 	
