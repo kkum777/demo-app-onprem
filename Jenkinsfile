@@ -13,7 +13,11 @@ pipeline {
 		   bat 'mvn  clean package -DskipTests'
 		 }
 		 }
-    
+    stage('Build1') {
+         steps {
+		   bat 'mvn  clean deploy'
+		 }
+		 }
 	
 	stage ('Deploy to On-prem') {
             steps {
