@@ -4,7 +4,7 @@
 
 	<groupId>6a081551-9e91-403c-848b-bfc39fd53448</groupId>
 	<artifactId>demo-app-onprem</artifactId>
-	<version>1.0.0</version>
+	<version>${app.version}</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo-app-onprem</name>
@@ -13,8 +13,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.3.0-20201013</app.runtime>
+		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
+		<app.version>1.0.3</app.version>
 	</properties>
 
 	<build>
@@ -40,7 +41,7 @@
 						<environment>Sandbox</environment>
 						
 					</armDeployment>
-				<classifier>mule-application</classifier>
+				<classifier>mule-application-example</classifier>
                 </configuration>
 			</plugin>
 		</plugins>
