@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>6a081551-9e91-403c-848b-bfc39fd53448</groupId>
-	<artifactId>demo-app-onprem-test</artifactId>
+	<artifactId>demo-app-onprem-testing</artifactId>
 	<version>1.0.6</version>
 	<packaging>mule-application</packaging>
 
-	<name>demo-app-onprem-test</name>
+	<name>demo-app-onprem-testing</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
