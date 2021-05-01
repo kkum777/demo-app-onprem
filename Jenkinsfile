@@ -16,7 +16,7 @@ pipeline {
 		 }
 	stage ('Deploy to On-prem') {
             steps {
-			bat 'mvn -s C:\Users\gvkk1\.m2\settings.xml -X  clean deploy -DmuleDeploy'
+		bat 'mvn -s C:\Users\gvkk1\.m2\settings.xml -X  clean deploy -DmuleDeploy'
       }
     }
    }
