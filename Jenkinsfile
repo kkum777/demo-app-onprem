@@ -8,12 +8,17 @@ pipeline {
   agent any
 
   stages {
+	
 	stage('Build') {
          steps {
 		   bat 'mvn  clean package -DskipTests'
 		 }
 		 }
-	
+	stage('Publish to Exchange') {
+         steps {
+		   bat 'mvn  clean deploy'
+		 }
+		 }
 	stage ('Deploy to On-prem') {
             steps {
 			bat 'mvn clean deploy -DmuleDeploy'
