@@ -4,7 +4,7 @@
   ],
   "secureProperties": [],
   "redeploymentEnabled": true,
-  "name": "6a081551-9e91-403c-848b-bfc39fd53448:demo-app-onprem-test:1.0.10",
+  "name": "ab90a407-2b9c-48a4-b042-d28178843e9d:demo-app-onprem1-example:1.0.1",
   "minMuleVersion": "4.3.0",
   "requiredProduct": "MULE_EE",
   "classLoaderModelLoaderDescriptor": {
