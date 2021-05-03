@@ -10,12 +10,12 @@ pipeline {
   stages {
 	stage('Publish to Exchange') {
          steps {
-		   bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml -X clean deploy'
+		   bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml clean deploy'
 		 }
 		 }
 	stage ('Deploy to OnPrem') {
             steps {
-			bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml -X clean deploy -DmuleDeploy'
+			bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml clean deploy -DmuleDeploy'
       }
     }
    }
