@@ -8,16 +8,17 @@ pipeline {
   agent any
 
   stages {
-	
 	stage('Publish to Exchange') {
          steps {
-		   	bat  'mvn clean deploy'
+		   bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml -X clean deploy'
 		 }
 		 }
-	stage ('Deploy to On-prem') {
+	stage ('Deploy to OnPrem') {
             steps {
-			bat 'mvn clean deploy -DmuleDeploy'
+			bat 'mvn -s C:/Users/gvkk1/.m2/settings.xml -X clean deploy -DmuleDeploy'
       }
     }
    }
-   }
+   
+   
+}
