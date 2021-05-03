@@ -4,7 +4,7 @@
 
 	<groupId>ab90a407-2b9c-48a4-b042-d28178843e9d</groupId>
 	<artifactId>demo-app-onprem1-example</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo-app-onprem1-example</name>
