@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>6a081551-9e91-403c-848b-bfc39fd53448</groupId>
-	<artifactId>demo-app-onprem-test</artifactId>
-	<version>1.0.13</version>
+	<artifactId>demo-app-onprem1-example</artifactId>
+	<version>1.0.15</version>
 	<packaging>mule-application</packaging>
 
-	<name>demo-app-onprem-test</name>
+	<name>demo-app-onprem1-example</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.3.0</app.runtime>
+		<app.runtime>4.3.0-20210304</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
-		
 	</properties>
 
 	<build>
@@ -39,10 +40,9 @@
 						<username>narik</username>
 						<password>Dial911119@123</password>
 						<environment>Sandbox</environment>
-						
 					</armDeployment>
-				<classifier>mule-application-example</classifier>
-                </configuration>
+					<classifier>mule-application-example</classifier>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -90,8 +90,8 @@
 	<distributionManagement>
 		<repository>
 			<id>anypoint-exchange-demo-org</id>
-			<name>Demo-org Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/6a081551-9e91-403c-848b-bfc39fd53448/maven</url>
+			<name>anypoint-exchange-demo-org</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/a081551-9e91-403c-848b-bfc39fd53448/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
