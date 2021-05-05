@@ -7,7 +7,7 @@
 	<version>1.0.5</version>
 	<packaging>mule-application</packaging>
 
-	<name>demo-app-onprem1-example</name>
+	<name>demo-app-onprem-br</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
